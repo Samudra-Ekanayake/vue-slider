@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue slider</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -12,7 +13,11 @@
 
         <h1>Vue slider</h1>
 
-        <div></div>
+        <div class="slide" :class="imgVisible(i)" v-for="(slide, i)  in slides">
+            <h2>{{slide.title}}</h2>
+            <p>{{slide.text}}</p>
+            <img :src="slide.image" alt="">
+        </div>
 
         <button>Successiva</button>
         <button>Precedente</button>
