@@ -52,14 +52,17 @@ createApp({
 
         successiva() {
             this.currentSlide++;
+            if(this.currentSlide >= this.slides.length){
+                this.currentSlide = 0
+
+            }
         },
 
         precedente() {
             this.currentSlide--;
+            if(this.currentSlide < 0) {
+                this.currentSlide = this.slides.length -1
+            }
         }
-
-
-        
-
     }
 }).mount('#app')
