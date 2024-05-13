@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 20rem;
+    width: 30rem;
+    object-fit: cover;
+}
+
+.slide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+button {
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
