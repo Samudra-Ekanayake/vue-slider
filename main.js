@@ -38,12 +38,28 @@ createApp({
     },
 
     methods: {
-        imgVisible (indice) {
+        /*imgVisible (indice) {
             if (this.currentSlide == indice ) {
                 return "active";
             } else {
                 return "";
             }
+        }*/
+
+        imgVisible(indice) {
+            return (indice == this.currentSlide) ? "active" : ""
+        },
+
+        successiva() {
+            this.currentSlide++;
+        },
+
+        precedente() {
+            this.currentSlide--;
         }
+
+
+        
+
     }
 }).mount('#app')
