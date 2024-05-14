@@ -32,6 +32,7 @@ createApp({
             ],
 
             currentSlide: 0,
+            timer: null,
 
 
         }
@@ -63,6 +64,19 @@ createApp({
             if(this.currentSlide < 0) {
                 this.currentSlide = this.slides.length -1
             }
+        },
+
+        startAutoplay() {
+            
+            this.timer = setInterval(() => {this.successiva();} , 1000);
+        },
+
+        stopAutoplay() {
+            if (this.timer) {
+                clearInterval(this.timer);
+                this.timer = null;
+            }
+
         }
     }
 }).mount('#app')
